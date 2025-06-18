@@ -24,7 +24,8 @@ public class Main {
                 }
             }
         } else {
-            System.out.println("Вы ввели не целое число, а что-то другое!");
+            String m = s.nextLine();
+            System.out.println("Вы ввели не целое число, а \"" + m + "\"!");
         }
     }
 }
