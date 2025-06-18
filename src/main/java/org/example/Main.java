@@ -1,17 +1,30 @@
 package org.example;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Scanner s = new Scanner(System.in);
+        System.out.println("Введите число n: ");
+        int n;
+        if (s.hasNextInt()) {
+            n = s.nextInt();
+            s.close();
+            int i;
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+            for (i = 1; i <= n; i++) {
+                if (i % 3 == 0 & i % 5 == 0) {
+                    System.out.println("FizzBuzz");
+                } else if (i % 3 == 0) {
+                    System.out.println("Fizz");
+                } else if (i % 5 == 0) {
+                    System.out.println("Buzz");
+                } else {
+                    System.out.println(i);
+                }
+            }
+        } else {
+            System.out.println("Вы ввели не целое число, а что-то другое!");
         }
     }
 }
