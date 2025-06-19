@@ -9,11 +9,9 @@ public class Main {
         int n;
         if (s.hasNextInt()) {
             n = s.nextInt();
-            s.close();
-            int i;
 
-            for (i = 1; i <= n; i++) {
-                if (i % 3 == 0 & i % 5 == 0) {
+            for (int i = 1; i <= n; i++) {
+                if (i % 3 == 0 && i % 5 == 0) {
                     System.out.println("FizzBuzz");
                 } else if (i % 3 == 0) {
                     System.out.println("Fizz");
@@ -27,5 +25,6 @@ public class Main {
             String m = s.nextLine();
             System.out.println("Вы ввели не целое число, а \"" + m + "\"!");
         }
+        s.close();
     }
 }
