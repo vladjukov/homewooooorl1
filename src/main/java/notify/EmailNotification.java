@@ -1,7 +1,7 @@
 package notify;
 
 public class EmailNotification extends Notification {
-    private final String email;
+    private String email;
 
     public EmailNotification(String email, String message) {
         super(message, Priority.HIGH);
