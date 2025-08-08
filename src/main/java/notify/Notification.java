@@ -7,9 +7,7 @@ public class Notification {
     private static int nextId = 1;
 
     public Notification() {
-        this.id = nextId++;
-        this.message = "empty";
-        this.priority = Priority.NORMAL;
+        this("empty", Priority.NORMAL);
     }
 
     public Notification(String message, Priority priority) {
@@ -19,11 +17,11 @@ public class Notification {
     }
 
     public void send() {
-        System.out.println(this.toString());
+        System.out.println(this);
     }
 
     public void send(String extra) {
-        System.out.println(this.toString() + ", дополнительно: " + extra);
+        System.out.println(this + ", дополнительно: " + extra);
     }
 
     @Override
