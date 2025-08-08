@@ -1,6 +1,6 @@
 package notify;
 
-enum Priority {
+public enum Priority {
     LOW,
     NORMAL,
     HIGH
