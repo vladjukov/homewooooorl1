@@ -1,10 +1,11 @@
 package notify;
 
 public class EmailNotification extends Notification {
+
     private String email;
 
-    public EmailNotification(String email, String message) {
-        super(message, Priority.HIGH);
+    public EmailNotification(String email) {
+        super("email message", Priority.LOW);
         this.email = email;
     }
 
@@ -19,7 +20,6 @@ public class EmailNotification extends Notification {
     @Override
     public void send() {
         System.out.println("Sending e-mail to " + email);
-        super.send();
     }
 
 }
