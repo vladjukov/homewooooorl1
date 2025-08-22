@@ -1,6 +1,6 @@
 package notify;
 
-public class Notification {
+public abstract class Notification implements Sendable {
     private final int id;
     private String message;
     private Priority priority;
@@ -16,9 +16,8 @@ public class Notification {
         this.priority = priority;
     }
 
-    public void send() {
-        System.out.println(this);
-    }
+    @Override
+    public abstract void send();
 
     public void send(String extra) {
         System.out.println(this + ", дополнительно: " + extra);
@@ -26,7 +25,7 @@ public class Notification {
 
     @Override
     public String toString() {
-        return "Уведомление {Сообщение = '" + message + "', приоритет = '" + priority + "}";
+        return "Уведомление №" + id + "{Сообщение = '" + message + "', приоритет = '" + priority + "}";
     }
 
     public int getId() {
